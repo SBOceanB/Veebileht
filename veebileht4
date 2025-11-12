@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+
+<title>Kohvipaus</title>
+</head>
+<body>
+
+<p class="ilus"> Info kohvipausi kohta</p>
+
+<img src="https://kohvipaus.ee/wp-content/uploads/2024/09/IMG_4554-scaled.jpg"
+     style="width:120px; height:auto; border-radius:4px;">
+
+<iframe 
+src="https://www.google.com/maps/place/Kohvipaus+Tartu/@58.3810933,26.6395219,12z/data=!4m6!3m5!1s0x46eb36e6d7a0893b:0x71daa2a618156a83!8m2!3d58.3811198!4d26.7219217!16s%2Fg%2F11c3sxtrw0?entry=ttu&g_ep=EgoyMDI1MTExMC4wIKXMDSoASAFQAw%3D%3D" 
+width="600" 
+height="450" style="border:0;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+  
+</iframe>
+
+
+</body>
+</html>
+
