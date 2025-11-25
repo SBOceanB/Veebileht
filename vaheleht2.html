@@ -46,6 +46,7 @@
         <div class="row"><span>Napolitana<br><br><em>salaami, paprika, juust, tomatipüree, sai</em></span> <span>9.20€</span></div>
         <div class="row"><span>Opera<br><br><em>sink, šampinjonid, juust, tomatipüree, sai</em></span> <span>9.20€</span></div>
       </div>
+      
     </section>
 
     <aside class="side">
@@ -58,31 +59,62 @@
       </iframe>
       <div class="gallery">
         
-        <div class="gallery-item">
-          <img src="https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fpepperoni_a6a91812a3.jpg&w=1920&q=75" alt="">
-          <p>Pepperoni</p>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fmargareta_56de3f7f07.jpg&w=1920&q=75" alt="">
-          <p>Margareta</p>
-        </div>
-        <div class="gallery-item">
-          <img src="https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fnapolitana_0f1b3340ee.jpg&w=1920&q=75" alt="">
-          <p>Napolitana</p>
-        </div>
-        <div class="gallery-item">
-           <img src="https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fopera_18b7773005.jpg&w=1920&q=75" alt="">
-           <p> Opera </p>
+<div class="slideshow">
+  <button class="prev">&#10094;</button>
+
+  <div class="slide-content">
+    <img id="slide-img" src="https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fpepperoni_a6a91812a3.jpg&w=1920&q=75" alt="Pitsa">
+    <p id="slide-name">Pepperoni</p>
+  </div>
+
+  <button class="next">&#10095;</button>
+</div>
         </div>
       </div> 
     </aside>
   </main>
+
+<script>
+  const slides = [
+    {
+      src: "https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fpepperoni_a6a91812a3.jpg&w=1920&q=75",
+      name: "Pepperoni"
+    },
+    {
+      src: "https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fmargareta_56de3f7f07.jpg&w=1920&q=75",
+      name: "Margareta"
+    },
+    {
+      src: "https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fnapolitana_0f1b3340ee.jpg&w=1920&q=75",
+      name: "Napolitana"
+    },
+    {
+      src: "https://tartu.operapizza.ee/_next/image?url=https%3A%2F%2Fdb.operapizza.ee%2Fuploads%2Fopera_18b7773005.jpg&w=1920&q=75",
+      name: "Opera"
+    }
+  ];
+
+  let index = 0;
+  const slideImg = document.getElementById("slide-img");
+  const slideName = document.getElementById("slide-name");
+
+  function updateSlide() {
+    slideImg.src = slides[index].src;
+    slideName.textContent = slides[index].name;
+  }
+
+  document.querySelector(".next").addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+</script>
           
       
   
 </body>
 </html>
-
-
-
