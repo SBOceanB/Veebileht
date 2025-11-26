@@ -131,7 +131,7 @@ transform: translateY(-10px); }
     margin-bottom: 25px; 
 }
 
-.menüü .rida { 
+.menu .row { 
     display: flex; 
     justify-content: 
     space-between; 
@@ -209,4 +209,5 @@ transform: translateY(-10px); }
 .next {
   right: 10px;
 }
+
 
