@@ -119,7 +119,7 @@ transform: translateY(-10px); }
     margin-bottom: 10px; 
 }
 
-.location { 
+.koht { 
     font-size: 16px; 
     color: #555; 
     margin-bottom: 15px; 
@@ -131,7 +131,7 @@ transform: translateY(-10px); }
     margin-bottom: 25px; 
 }
 
-.menu .row { 
+.menüü .rida { 
     display: flex; 
     justify-content: 
     space-between; 
@@ -209,3 +209,4 @@ transform: translateY(-10px); }
 .next {
   right: 10px;
 }
+
