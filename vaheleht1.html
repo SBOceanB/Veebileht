@@ -1,28 +1,123 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-
-<title>Matsimoka</title>
+  <meta charset="UTF-8">
+  <title>Matsimoka</title>
+  <link rel="stylesheet" href="stiil.css">
 </head>
+
 <body>
+  <header>
+    <nav class="navigatsioon">
+      <a href="#">Avaleht</a>
+      <a href="#">Matsimoka</a>
+      <a href="#">Opera Pizza</a>
+      <a href="#">Has Kebab</a>
+      <a href="#">Kohvipaus</a>
+    </nav>
+  </header>
 
-<p class="ilus"> Info matsimoka ciabattade kohta :D </p>
+ <div class="pikk-pilt-taga" 
+     style="width:100%; height:200px;
+            background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr4M3iC4NM4R6SwfZ58Fcr3vn_7R5kAFjP7Q&s')
+            center/cover no-repeat;">
+</div>
+  </div>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr4M3iC4NM4R6SwfZ58Fcr3vn_7R5kAFjP7Q&s"
-     alt="Pilt tootest"
-     style="width:600px; height:auto; border-radius:4px;">
+  <main class="lehe-paigutus">
+    <section class="info">
+      <h1>Matsimoka</h1>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2091.9187928636134!2d26.72487267646627!3d58.37790638681175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb377f23bbaecd%3A0xbfc35a4164f3b195!2sMatsimoka!5e0!3m2!1set!2see!4v1762940202704!5m2!1set!2see" 
-width="600" 
-height="450" 
-style="border:0;" 
-allowfullscreen="" 
-loading="lazy" 
-referrerpolicy="no-referrer-when-downgrade"
-></iframe>
+      <div class="hinnang">
+       3.8 ★★★★★
+      </div>
 
+      <p class="koht">Riia tn 1</p>
+
+      <p class="intro">
+        Matsimokast on võimalik soetada nii maitsev lõunavõileib kui ka taskukohaseid tooteid koduseks toiduvalmistamiseks. Kiire ja toitev lõuna, mida kasvõi jalutuskäigul nautida!
+      </p>
+
+      <h2>Menüü</h2>
+      <div class="menu">
+        <div class="row">
+          <span>Caesari-suitsukana ciabatta<br><br><em>Suitsukana, salat, tomat, juust, Caesari kaste
+</em></span> <span>2.90€</span></div>
+        <div class="row"><span>Trühvli-salaami ciabatta <br><br><em>Salaami, trühvlimajonees, salat
+
+
+</em></span> <span>2.90€</span></div>
+        <div class="row"><span>Ahjuliha ciabatta<br><br><em>Ahjuliha, salat, juust, sibul, kaste
+
+</em></span> <span>2.90€</span></div>
+    </section>
+
+    <aside class="side">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2091.9187928636134!2d26.72487267646627!3d58.37790638681175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb377f23bbaecd%3A0xbfc35a4164f3b195!2sMatsimoka!5e0!3m2!1set!2see!4v1762940202704!5m2!1set!2see" 
+      width="300" 
+      height="300" style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="gallery">
+        
+<div class="slideshow">
+  <button class="prev">&#10094;</button>
+
+  <div class="slide-content">
+    <img id="slide-img" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2tRnrzbOrzgvcOIbDFNF_ZIB2weSP1vb4Q7wWjA79jF1Q-Wh0vMxBrF4GOgV1vPDyrg&usqp=CAU">
+    <p id="slide-name">Valik ciabattasid</p>
+  </div>
+
+  <button class="next">&#10095;</button>
+</div>
+        </div>
+      </div> 
+    </aside>
+  </main>
+
+<script>
+  const slides = [
+    {
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2tRnrzbOrzgvcOIbDFNF_ZIB2weSP1vb4Q7wWjA79jF1Q-Wh0vMxBrF4GOgV1vPDyrg&usqp=CAU",
+      name: "Valik ciabattasid"
+    },
+    {
+      src: "https://www.matsimoka.ee/storage/images/_thumbs/pub_th2/img-6169_1.webp",
+      name: "Tartu müügipunkt"
+    },
+    {
+      src: "https://imageproxy.wolt.com/menu/menu-images/63e2011cae3e6dfd86d30a9c/9392208a-d3b7-11ed-8e05-c64e62585cf9_eyw_1355.jpeg?w=600",
+      name: "Kebabi komplekt"
+    },
+    {
+      src: "https://imageproxy.wolt.com/menu/menu-images/60115424aef0bc1c83792d1e/4e9b2f92-931f-11eb-bc5f-665607b03c20_bolt___has_032021_034.jpeg?w=600",
+      name: "Kebabi vaagen"
+    }
+  ];
+
+  let index = 0;
+  const slideImg = document.getElementById("slide-img");
+  const slideName = document.getElementById("slide-name");
+
+  function updateSlide() {
+    slideImg.src = slides[index].src;
+    slideName.textContent = slides[index].name;
+  }
+
+  document.querySelector(".next").addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+</script>
+          
+      
+  
 </body>
 </html>
-
-
-
