@@ -4,7 +4,9 @@ Rühma liikmed: Helena Sinilaid, Minna Marie Kask ja Ayrton Rungi
 
 Tööjaotus: 
 Helena - pealeht, linkide panemine ning ülespanek veebi; vaatab, et kõik on tehtud
+
 Minna Marie - vahelehed Has Kebab ja Kohvipaus, vahelehtede kujundus, koosoleku tegemine
+
 Ayrton - vahelehed Matsimoka ja Opera Pizza, vahelehe kujunduse teostamine
 
 Rühma käitumisnormid:
@@ -13,3 +15,4 @@ Rühma käitumisnormid:
 3. Lahendab ülesanded õigeks ajaks
 4. Annab vajaminevat tagasiside
 5. On kursis tehtud tööde ja tähtaegadega
+
