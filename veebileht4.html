@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Kohvipaus</title>
+  <link rel="stylesheet" href="stiil.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navigatsioon">
+      <a href="#">Avaleht</a>
+      <a href="#">Matsimoka</a>
+      <a href="#">Opera Pizza</a>
+      <a href="#">Has Kebab</a>
+      <a href="#">Kohvipaus</a>
+    </nav>
+  </header>
+
+ <div class="pikk-pilt-taga" 
+     style="width:100%; height:200px;
+            background:url('https://kohvipaus.ee/wp-content/uploads/2024/09/IMG_4554-scaled.jpg')
+            center/cover no-repeat;">
+</div>
+  </div>
+
+  <main class="lehe-paigutus">
+    <section class="info">
+      <h1>Kohvipaus</h1>
+
+      <div class="hinnang">
+       4.6 ★★★★★
+      </div>
+
+      <p class="koht">Rüüti tn 8</p>
+
+      <p class="intro">
+        Kohvipaus on hubane peatuspaik Tartu südalinnas. Ideaalne paik lõunatamiseks kohapeal või kiire peatus toidu kaasa tellimiseks. Valikus on toitvad ja taskukohased salatid, wrapid, võileivad, magustoidud ja hommikupudrud. 
+      </p>
+
+      <h2>Menüü</h2>
+      <div class="menu">
+        <div class="row">
+          <span>Suitsulõhewrap<br><br><em>Nisutortilla, salatipõhi, kurk, tomat, suitsulõhe, salatijuustukuubikud, hapukoore-majoneesikaste
+</em></span> <span>5.50€</span></div>
+        <div class="row"><span>Caesari wrapp kanaga / lõhega <br><br><em>Nisutortilla, salatipõhi, tomat, parmesan, saiakrutoonid, Caesari kaste + suitsukana / suitsulõhe
+
+
+</em></span> <span>5.30€ / 5.50€</span></div>
+        <div class="row"><span>Pastasalat kanaga<br><br><em>Salatipõhi, sink, salatijuustukuubikud, pasta, tomat, basiilik, pestokaste
+
+</em></span> <span>5.90€</span></div>
+        <div class="row"><span>Jogurt kodujuustu ja puuviljadegaa<br><br><em>
+
+</em></span> <span>3.90€</span></div>
+    </section>
+
+    <aside class="side">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66935.35406569071!2d26.639521920769493!3d58.381093347655685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb36e6d7a0893b%3A0x71daa2a618156a83!2sKohvipaus%20Tartu!5e0!3m2!1set!2see!4v1762939982924!5m2!1set!2see" 
+      width="300" 
+      height="300" style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="gallery">
+        
+<div class="slideshow">
+  <button class="prev">&#10094;</button>
+
+  <div class="slide-content">
+    <img id="slide-img" src="https://kohvipaus.ee/wp-content/uploads/2024/09/IMG_4556-scaled.jpg">
+    <p id="slide-name">Tartu kohvik</p>
+  </div>
+
+  <button class="next">&#10095;</button>
+</div>
+        </div>
+      </div> 
+    </aside>
+  </main>
+
+<script>
+  const slides = [
+    {
+      src: "https://imageproxy.wolt.com/menu/menu-images/64f725e81d2ba43a2e750196/1b4dff34-bf81-11ee-8442-96cc1f91893a_img_7751__1_.jpg?w=960",
+      name: "Caesari wrap kanaga"
+    },
+    {
+      src: "https://imageproxy.wolt.com/menu/menu-images/64f725e81d2ba43a2e750196/c3a7a2cc-e531-11ee-bb6e-1a2de8e0a841_img_8313.jpg?w=960",
+      name: "Pastasalat kanaga"
+    },
+    {
+      src: "https://imageproxy.wolt.com/menu/menu-images/64f725e81d2ba43a2e750196/66ba336e-c901-11ee-81b2-ee7bbdb67564_img_7911.jpg?w=960",
+      name: "Jogurt puuviljadega"
+    },
+  ];
+
+  let index = 0;
+  const slideImg = document.getElementById("slide-img");
+  const slideName = document.getElementById("slide-name");
+
+  function updateSlide() {
+    slideImg.src = slides[index].src;
+    slideName.textContent = slides[index].name;
+  }
+
+  document.querySelector(".next").addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+</script>
+          
+      
+  
+</body>
+</html>
+
