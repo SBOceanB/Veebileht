@@ -14,3 +14,4 @@ Rühma käitumisnormid:
 3. Lahendab ülesanded õigeks ajaks
 4. Annab vajaminevat tagasiside
 5. On kursis tehtud tööde ja tähtaegadega
+
