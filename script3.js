@@ -1,4 +1,9 @@
-  const slides = [
+// Autor: Ayrton Rungi
+// Fail: script3.js
+// Funktsioon: Slideshow piltide vahetamine
+
+// Massiiv kõikide slaidide andmetega
+const slides = [
     {
       src: "https://imageproxy.wolt.com/menu/menu-images/5e69dea92b19b4620a2b633e/c1b15816-d65a-11eb-99b4-5abcf37fdda0_bolt___has_032021_011.jpeg?w=960",
       name: "Kebab"
@@ -16,21 +21,22 @@
       name: "Kebabi vaagen"
     }
   ];
-
+// Hoiab aktiivse pildi indeksit
   let index = 0;
+// Võtame HTML elemendid kasutamiseks
   const slideImg = document.getElementById("slide-img");
   const slideName = document.getElementById("slide-name");
-
+// Funktsioon, mis uuendab ekraanil olevat pilti ja nime
   function updateSlide() {
     slideImg.src = slides[index].src;
     slideName.textContent = slides[index].name;
   }
-
+// Nupu "next" vajutus – liigu järgmisele pildile
   document.querySelector(".next").addEventListener("click", () => {
     index = (index + 1) % slides.length;
     updateSlide();
   });
-
+// Nupu "prev" vajutus – liigu eelmisele pildile
   document.querySelector(".prev").addEventListener("click", () => {
     index = (index - 1 + slides.length) % slides.length;
     updateSlide();
